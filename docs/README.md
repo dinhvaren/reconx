@@ -21,14 +21,13 @@ assessment data is exposed.
 | :---: | :---: |
 | ![Findings](images/demo/findings.png) | ![LLM profiles](images/llm.png) |
 
-See the [complete interface gallery](GALLERY.md) for the full screen tour,
-including desktop, dark mode, and mobile views.
+See the full [interface gallery](../README.md#interface), including task
+execution, findings, system configuration, dark mode, and mobile views.
 
 ## Guides
 
 - [Architecture](ARCHITECTURE.md): components, data flow, persistence, and LLM
   routing.
-- [Interface gallery](GALLERY.md): complete application screenshot tour.
 - [Operations](OPERATIONS.md): build, start, health checks, backups, logs, and
   troubleshooting.
 - [Security](SECURITY.md): trust boundaries, secret handling, supply-chain

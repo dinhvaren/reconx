@@ -16,24 +16,98 @@ traffic and evidence capture, findings, reports, and configurable LLM routing.
 
 ## Interface
 
-The richer workspace views use RECONX's built-in Acme demo dataset
-(`NEXT_PUBLIC_MOCK=1`); login and model configuration are captured from the
-current local deployment. No personal assessment data is exposed.
+The gallery is captured at 1440 x 900. Core workflow views use RECONX's
+built-in Acme demo dataset (`NEXT_PUBLIC_MOCK=1`); login, notifications, and
+current model configuration are captured from the local deployment.
+
+The demo data is static and intentionally fictional. It contains no real user,
+target, credential, or assessment data.
+
+### Core workspace
 
 | Login | Dashboard |
 | :---: | :---: |
 | ![RECONX login](docs/images/login.png) | ![RECONX dashboard](docs/images/demo/dashboard.png) |
 
-| Chat with agent | Exploration graph |
+| Dashboard in dark mode | Task list |
 | :---: | :---: |
-| ![RECONX chat](docs/images/demo/chat-conversation.png) | ![RECONX exploration graph](docs/images/demo/task-graph.png) |
+| ![Dashboard in dark mode](docs/images/demo/dashboard-dark.png) | ![Task list](docs/images/demo/tasks.png) |
 
-| Findings | LLM profiles |
+| Task sessions | Agent chat |
 | :---: | :---: |
-| ![RECONX findings](docs/images/demo/findings.png) | ![RECONX LLM profiles](docs/images/llm.png) |
+| ![Task sessions](docs/images/demo/task-sessions.png) | ![Agent chat](docs/images/demo/chat.png) |
 
-See the [complete interface gallery](docs/GALLERY.md) for tasks, traffic,
-assets, findings, reports, system configuration, dark mode, and mobile views.
+| Human-in-the-loop conversation | Task overview |
+| :---: | :---: |
+| ![Human-in-the-loop conversation](docs/images/demo/chat-conversation.png) | ![Task overview](docs/images/demo/task-overview.png) |
+
+### Task execution
+
+| Exploration graph | Generated report |
+| :---: | :---: |
+| ![Exploration graph](docs/images/demo/task-graph.png) | ![Generated report](docs/images/demo/task-report.png) |
+
+| Findings | Finding detail |
+| :---: | :---: |
+| ![Findings](docs/images/demo/findings.png) | ![Finding detail](docs/images/demo/finding-detail.png) |
+
+| Captured traffic | Tool runs |
+| :---: | :---: |
+| ![Captured traffic](docs/images/demo/traffic.png) | ![Tool runs](docs/images/demo/tool-runs.png) |
+
+| LLM records | Asset inventory |
+| :---: | :---: |
+| ![LLM records](docs/images/demo/llm-records.png) | ![Asset inventory](docs/images/demo/assets.png) |
+
+### Assets and workspace
+
+| Asset synchronization | Workspace files |
+| :---: | :---: |
+| ![Asset synchronization](docs/images/demo/asset-sync.png) | ![Workspace files](docs/images/demo/workspace.png) |
+
+### Agents and tools
+
+| Current 9Router profiles | Agents |
+| :---: | :---: |
+| ![Current 9Router profiles](docs/images/llm.png) | ![Agents](docs/images/demo/agents.png) |
+
+| MCP servers | Skills |
+| :---: | :---: |
+| ![MCP servers](docs/images/demo/mcp.png) | ![Skills](docs/images/demo/skills.png) |
+
+| Tools | Command interception |
+| :---: | :---: |
+| ![Tools](docs/images/demo/tools.png) | ![Command interception](docs/images/demo/intercept-rules.png) |
+
+### Safety and operations
+
+| Asset interception | Approval records |
+| :---: | :---: |
+| ![Asset interception](docs/images/demo/asset-interception.png) | ![Approval records](docs/images/demo/approvals.png) |
+
+| System logs | Notifications |
+| :---: | :---: |
+| ![System logs](docs/images/demo/logs.png) | ![Notifications](docs/images/notifications-live.png) |
+
+| System settings | Mobile login |
+| :---: | :---: |
+| ![System settings](docs/images/demo/settings.png) | ![Mobile login](docs/images/demo/mobile/login.png) |
+
+### Mobile
+
+The mobile views use a 390 x 844 viewport and demonstrate the responsive
+sidebar, metrics cards, findings list, and model cards.
+
+| Mobile dashboard | Mobile findings |
+| :---: | :---: |
+| ![Mobile dashboard](docs/images/demo/mobile/dashboard.png) | ![Mobile findings](docs/images/demo/mobile/findings.png) |
+
+| Mobile LLM profiles | |
+| :---: | :---: |
+| ![Mobile LLM profiles](docs/images/demo/mobile/llm.png) | |
+
+The notifications view is from the live local deployment and currently has no
+configured delivery channels.
 
 ## What is included
 
@@ -146,7 +220,6 @@ frontend, Go binary, and `reconx:local` image before recreating the container.
 ## Documentation
 
 - [Documentation index](docs/README.md)
-- [Complete interface gallery](docs/GALLERY.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Operations](docs/OPERATIONS.md)
 - [Security model](docs/SECURITY.md)

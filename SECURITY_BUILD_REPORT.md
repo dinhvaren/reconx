@@ -84,10 +84,10 @@ A current RECONX documentation set now covers:
 - `docs/OPERATIONS.md`: build, lifecycle, health, backup, and troubleshooting.
 - `docs/SECURITY.md`: trust boundaries, secrets, controls, and residual risk.
 - `docs/DEVELOPMENT.md`: layout, tests, build loop, and compatibility names.
-- `docs/images/` and `docs/GALLERY.md`: live-build and built-in mock-data
-  screenshots covering the core workflow, task detail, findings, system
-  configuration, dark mode, and responsive mobile views without exposing real
-  assessment data or credentials.
+- `README.md` and `docs/images/`: live-build and built-in mock-data screenshots
+  covering the core workflow, task detail, findings, system configuration,
+  dark mode, and responsive mobile views without exposing real assessment data
+  or credentials.
 - `CHANGELOG.md`: local RECONX release history.
 
 `LICENSE`, functional skill documentation, the third-party shadcn license, and
