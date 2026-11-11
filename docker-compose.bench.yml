@@ -1,0 +1,27 @@
+# ARTEX Tencent TSec Benchmark evaluation image: build + run locally in one step.
+# Independent of the production docker-compose.yml (multiple services: artex+postgres).
+# Usage:
+#   cp bench/.env.example bench/.env   # Set LLM_API_KEY / BENCHMARK_TOKEN, etc.
+#   docker compose -f docker-compose.bench.yml up --build      # Build and run in the foreground (view logs)
+#   docker compose -f docker-compose.bench.yml up --build -d   # Run in the background
+#   docker compose -f docker-compose.bench.yml logs -f
+#   docker compose -f docker-compose.bench.yml down            # Stop (add -v to delete volumes too)
+# Browser: http://localhost:8787 (log in with ADMIN_PASSWORD)
+
+services:
+  artex-bench:
+    build:
+      context: .
+      dockerfile: Dockerfile.bench
+    image: artex-bench:latest
+    container_name: artex-bench
+    env_file:
+      - bench/.env
+    # Share the host network stack to reach target networks available to the host/VPN directly.
+    # Host mode needs no ports mapping: the container binds host ports 8787 (UI/API), 8788 (proxy),
+    # and 5432 (internal PostgreSQL). Keep all three ports free; stop conflicting services before local testing.
+    network_mode: host
+    restart: "no"
+
+volumes:
+  artex_bench_data:
