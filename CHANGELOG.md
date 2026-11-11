@@ -25,6 +25,8 @@ history remains available from the original open-source repository.
 - A complete interface gallery with core workflows, task sessions, exploration
   graphs, findings, system configuration, dark mode, and responsive mobile
   views.
+- The complete 83-skill Claude-BugHunter collection pinned at
+  `d5dcc5347675ed431488e0a0e46749e4918aa194`, with source and license notices.
 - Operations, architecture, security, and development documentation.
 
 ### Security

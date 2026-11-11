@@ -9,7 +9,8 @@
 | `db/` | PostgreSQL schema and persistence |
 | `server/` | HTTP API, authentication, settings, and embedded UI serving |
 | `sidequestion/` | `/btw` context snapshots and bounded side-question service |
-| `skills/` | Filesystem-backed agent skills |
+| `skills/` | Filesystem-backed agent skills, including the pinned Claude-BugHunter collection |
+| `THIRD_PARTY_NOTICES/` | Third-party source, attribution, and license notices |
 | `web/` | Next.js frontend |
 | `dist/` | Locally built binaries and ignored build output |
 | `data/` | Ignored local runtime data |
@@ -54,6 +55,25 @@ go build -tags embedui -trimpath -o dist\amd64\reconx ./cmd/artex
 Run `npm ci` with lifecycle scripts disabled for the reviewed supply-chain
 path. Do not update dependencies as part of a branding, documentation, or
 unrelated bug-fix change.
+
+## Third-party skills
+
+The Claude-BugHunter skill collection is pinned in
+`THIRD_PARTY_NOTICES/Claude-BugHunter/SOURCE.md`. Preserve its attribution and
+license files when updating the bundle.
+
+Only the upstream `skills/` tree is included. Claude slash commands, the
+command engine, repository installers, workflows, `cbh` CLI, and Burp MCP
+configuration are intentionally excluded.
+
+When updating:
+
+1. Review the new upstream commit and skill diff.
+2. Check frontmatter validity, duplicate names, symlinks, scripts, and embedded
+   secrets.
+3. Do not run upstream installers or helper scripts during installation.
+4. Update the pinned commit and audit notes in the third-party notice.
+5. Confirm `/api/skills` reports every expected skill.
 
 ## Compatibility identifiers
 

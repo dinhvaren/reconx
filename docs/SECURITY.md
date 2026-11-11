@@ -30,6 +30,13 @@ gateway you do not trust.
 - Use `npm ci --ignore-scripts` for the reviewed build path.
 - Keep Compose on `reconx:local` with `pull_policy: never`.
 - Review package and image changes before rebuilding.
+- Keep the Claude-BugHunter bundle pinned to an audited commit and preserve its
+  MIT/CC BY 4.0 notices.
+
+The installed skill collection contains dual-use offensive-security
+instructions and payload examples for authorized testing. Installing a skill
+does not run it. Skills become guidance only when the agent loads them, and
+their commands still pass through the normal execution and approval path.
 
 ## Runtime controls
 
@@ -90,3 +97,6 @@ limits, and residual risk.
   established.
 - A local gateway can introduce rate limits, availability, logging, and
   data-processing risks outside RECONX's control.
+- Third-party skills can contain outdated techniques, unsafe commands, or
+  offensive payload examples. Review the pinned source and grant visibility
+  only to agents that need each skill.

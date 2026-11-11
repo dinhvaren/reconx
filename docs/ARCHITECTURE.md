@@ -70,6 +70,21 @@ The OpenAI-compatible provider normalizes the base URL and appends
 `/chat/completions`, avoiding a duplicated `/v1`. Profile changes applied in
 the UI are hot-reloaded by the running service.
 
+### Skill library
+
+Skills are loaded from the host `./skills` directory and mounted into the
+container at `/app/skills`. Each subdirectory exposes a `SKILL.md` manifest and
+may include references or helper scripts.
+
+RECONX ships with the 83-skill Claude-BugHunter collection pinned at commit
+`d5dcc5347675ed431488e0a0e46749e4918aa194`, in addition to the application's
+pre-existing skills. The skill registry exposes skill names and descriptions to
+an agent only after that skill is enabled for the agent in `System -> Skill`.
+
+Installing a skill does not execute its scripts. Skills are instructions loaded
+on demand by the agent; related scripts are only run if the agent explicitly
+invokes them through the normal tool and approval path.
+
 ## Persistence
 
 | Storage | Docker location | Contents |
@@ -77,7 +92,7 @@ the UI are hot-reloaded by the running service.
 | PostgreSQL | `pgdata` volume | Tasks, graph state, agents, users, findings, settings, profiles |
 | JWT keys | `jwtkeys` volume | Signing material kept outside the data workspace |
 | Data workspace | Host `./data` | Runtime data, local indexes, evidence blobs, and task artifacts |
-| Skills | Host `./skills` | Filesystem-backed skill definitions |
+| Skills | Host `./skills` | Filesystem-backed skill definitions and references |
 
 PostgreSQL data and `jwtkeys` must survive container recreation. Do not remove
 Docker volumes as part of a routine update.

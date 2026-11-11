@@ -88,6 +88,8 @@ A current RECONX documentation set now covers:
   covering the core workflow, task detail, findings, system configuration,
   dark mode, and responsive mobile views without exposing real assessment data
   or credentials.
+- `THIRD_PARTY_NOTICES/Claude-BugHunter/`: pinned source, attribution, and
+  dual-license notices for the installed 83-skill bundle.
 - `CHANGELOG.md`: local RECONX release history.
 
 `LICENSE`, functional skill documentation, the third-party shadcn license, and
@@ -191,6 +193,7 @@ appending the endpoint, avoiding a duplicated `/v1`.
 | Known indicator scan | PASS, no reviewed match |
 | Documentation presence and local links | PASS |
 | Current UI screenshot capture and gallery | PASS, reviewed live and mock-data views |
+| Claude-BugHunter skill installation | PASS, 83/83 expected skills visible through `/api/skills` |
 | Tracked secret check | PASS; `.env` is ignored |
 
 The six server-suite failures were Windows filesystem edge cases: five evidence
@@ -211,6 +214,9 @@ require another Docker rebuild.
 - Self-update and binary replacement code remains present.
 - 9Router becomes a routing, availability, logging, and prompt-data boundary.
 - The local `.env` contains secrets and must remain ignored and protected.
+- Claude-BugHunter provides offensive-security payload examples intended only
+  for authorized testing. Skills are not assigned automatically, and their
+  scripts are not executed during installation.
 - Port `8787` is not usable on this host because of the Windows reserved range;
   `18787` is the verified local URL.
 

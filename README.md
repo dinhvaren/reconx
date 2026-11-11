@@ -71,9 +71,9 @@ target, credential, or assessment data.
 | :---: | :---: |
 | ![Current 9Router profiles](docs/images/llm.png) | ![Agents](docs/images/demo/agents.png) |
 
-| MCP servers | Skills |
+| MCP servers | Skill library |
 | :---: | :---: |
-| ![MCP servers](docs/images/demo/mcp.png) | ![Skills](docs/images/demo/skills.png) |
+| ![MCP servers](docs/images/demo/mcp.png) | ![Skill library](docs/images/skills-library-live.png) |
 
 | Tools | Command interception |
 | :---: | :---: |
@@ -117,6 +117,8 @@ configured delivery channels.
 - Traffic capture and evidence binding for findings and reports.
 - Human approval and command-interception controls.
 - OpenAI-compatible LLM profiles with model selection and failover.
+- 83 pinned Claude-BugHunter skills for web, API, cloud, identity, mobile,
+  enterprise, validation, OSINT, and reporting workflows.
 - Local source builds packaged as `reconx:local`.
 - Loopback-only Docker publishing by default.
 
@@ -166,6 +168,27 @@ docker compose logs reconx
 ```
 
 Do not run `install.sh` or `update.sh` for this local distribution.
+
+## Skill library
+
+RECONX includes the complete skill set from
+[`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter),
+pinned to commit `d5dcc5347675ed431488e0a0e46749e4918aa194`.
+
+The bundle contributes 83 skills across bug-hunting methodology, recon,
+vulnerability classes, cloud and identity platforms, external red-team
+workflows, evidence hygiene, validation, and reporting. RECONX currently shows
+86 total skills, including its three pre-existing skills and the identical APK
+red-team skill already present in the workspace.
+
+The files are mounted from `./skills` and are loaded without rebuilding the
+Docker image. Visibility remains explicit per agent: open
+`System -> Skill` and enable the relevant skills for each agent. The bundle is
+not assigned automatically because loading all 83 into every planner, worker,
+reporting, and retest agent would add unnecessary context and broaden behavior.
+
+License and source details are in
+[`THIRD_PARTY_NOTICES/Claude-BugHunter/SOURCE.md`](THIRD_PARTY_NOTICES/Claude-BugHunter/SOURCE.md).
 
 ## LLM gateway
 
