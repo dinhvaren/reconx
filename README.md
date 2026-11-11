@@ -16,21 +16,24 @@ traffic and evidence capture, findings, reports, and configurable LLM routing.
 
 ## Interface
 
-These screenshots were captured from the current local build on
-2026-11-11. The workspace is intentionally empty, so no assessment targets or
-findings are exposed.
+The richer workspace views use RECONX's built-in Acme demo dataset
+(`NEXT_PUBLIC_MOCK=1`); login and model configuration are captured from the
+current local deployment. No personal assessment data is exposed.
 
 | Login | Dashboard |
 | :---: | :---: |
-| ![RECONX login](docs/images/login.png) | ![RECONX dashboard](docs/images/dashboard.png) |
+| ![RECONX login](docs/images/login.png) | ![RECONX dashboard](docs/images/demo/dashboard.png) |
 
-| Tasks | Findings |
+| Chat with agent | Exploration graph |
 | :---: | :---: |
-| ![RECONX tasks](docs/images/tasks.png) | ![RECONX findings](docs/images/findings.png) |
+| ![RECONX chat](docs/images/demo/chat-conversation.png) | ![RECONX exploration graph](docs/images/demo/task-graph.png) |
 
-| Assets | LLM profiles |
+| Findings | LLM profiles |
 | :---: | :---: |
-| ![RECONX assets](docs/images/assets.png) | ![RECONX LLM profiles](docs/images/llm.png) |
+| ![RECONX findings](docs/images/demo/findings.png) | ![RECONX LLM profiles](docs/images/llm.png) |
+
+See the [complete interface gallery](docs/GALLERY.md) for tasks, traffic,
+assets, findings, reports, system configuration, dark mode, and mobile views.
 
 ## What is included
 
@@ -143,6 +146,7 @@ frontend, Go binary, and `reconx:local` image before recreating the container.
 ## Documentation
 
 - [Documentation index](docs/README.md)
+- [Complete interface gallery](docs/GALLERY.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Operations](docs/OPERATIONS.md)
 - [Security model](docs/SECURITY.md)

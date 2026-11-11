@@ -5,25 +5,30 @@ operating workflow.
 
 ## Application screenshots
 
-Captured from the local RECONX build at 1440 x 900. These views use an empty
-workspace so the documentation does not expose assessment targets or findings.
+The core workflow views use the built-in Acme demo dataset; the login and
+current 9Router profile views come from the live local deployment. No personal
+assessment data is exposed.
 
 | Login | Dashboard |
 | :---: | :---: |
-| ![Login](images/login.png) | ![Dashboard](images/dashboard.png) |
+| ![Login](images/login.png) | ![Dashboard](images/demo/dashboard.png) |
 
-| Tasks | Findings |
+| Agent chat | Exploration graph |
 | :---: | :---: |
-| ![Tasks](images/tasks.png) | ![Findings](images/findings.png) |
+| ![Agent chat](images/demo/chat-conversation.png) | ![Exploration graph](images/demo/task-graph.png) |
 
-| Assets | LLM profiles |
+| Findings | LLM profiles |
 | :---: | :---: |
-| ![Assets](images/assets.png) | ![LLM profiles](images/llm.png) |
+| ![Findings](images/demo/findings.png) | ![LLM profiles](images/llm.png) |
+
+See the [complete interface gallery](GALLERY.md) for the full screen tour,
+including desktop, dark mode, and mobile views.
 
 ## Guides
 
 - [Architecture](ARCHITECTURE.md): components, data flow, persistence, and LLM
   routing.
+- [Interface gallery](GALLERY.md): complete application screenshot tour.
 - [Operations](OPERATIONS.md): build, start, health checks, backups, logs, and
   troubleshooting.
 - [Security](SECURITY.md): trust boundaries, secret handling, supply-chain
