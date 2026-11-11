@@ -84,6 +84,8 @@ A current RECONX documentation set now covers:
 - `docs/OPERATIONS.md`: build, lifecycle, health, backup, and troubleshooting.
 - `docs/SECURITY.md`: trust boundaries, secrets, controls, and residual risk.
 - `docs/DEVELOPMENT.md`: layout, tests, build loop, and compatibility names.
+- `docs/images/`: six screenshots captured from the current local UI with an
+  empty workspace and no exposed credentials or assessment data.
 - `CHANGELOG.md`: local RECONX release history.
 
 `LICENSE`, functional skill documentation, the third-party shadcn license, and
@@ -186,6 +188,7 @@ appending the endpoint, avoiding a duplicated `/v1`.
 | Profile connection tests | PASS, HTTP 200 |
 | Known indicator scan | PASS, no reviewed match |
 | Documentation presence and local links | PASS |
+| Current UI screenshot capture | PASS, six validated views |
 | Tracked secret check | PASS; `.env` is ignored |
 
 The six server-suite failures were Windows filesystem edge cases: five evidence

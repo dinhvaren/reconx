@@ -22,6 +22,8 @@ history remains available from the original open-source repository.
 - Loopback-only Compose runtime with pinned base and PostgreSQL images.
 - Reproducible source-build instructions for the static frontend, embedded Go
   binary, and Docker image.
+- Current desktop screenshots for login, dashboard, tasks, findings, assets,
+  and LLM profile management.
 - Operations, architecture, security, and development documentation.
 
 ### Security

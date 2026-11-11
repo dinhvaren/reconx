@@ -14,6 +14,24 @@ traffic and evidence capture, findings, reports, and configurable LLM routing.
 
 > Use RECONX only against systems you own or are explicitly authorized to test.
 
+## Interface
+
+These screenshots were captured from the current local build on
+2026-11-11. The workspace is intentionally empty, so no assessment targets or
+findings are exposed.
+
+| Login | Dashboard |
+| :---: | :---: |
+| ![RECONX login](docs/images/login.png) | ![RECONX dashboard](docs/images/dashboard.png) |
+
+| Tasks | Findings |
+| :---: | :---: |
+| ![RECONX tasks](docs/images/tasks.png) | ![RECONX findings](docs/images/findings.png) |
+
+| Assets | LLM profiles |
+| :---: | :---: |
+| ![RECONX assets](docs/images/assets.png) | ![RECONX LLM profiles](docs/images/llm.png) |
+
 ## What is included
 
 - Go backend with an embedded Next.js user interface.
